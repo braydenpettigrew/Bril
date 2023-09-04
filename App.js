@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Bril 3.0</Text>
+      <Text>Brill 3.0</Text>
       <StatusBar style="auto" />
     </View>
   );
