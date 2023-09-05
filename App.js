@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Brill 3.0 - this is now on GitHub</Text>
+      <Text>Brill 3.0 - this is now on GitHub. this shit is hella gay</Text>
       <StatusBar style="auto" />
     </View>
   );
