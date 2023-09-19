@@ -52,7 +52,7 @@ function App() {
           options={{
             title: 'Third Page', //Set Header Title
             headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
+              backgroundColor: '#dodgerblue', //Set Header color
             },
             headerTintColor: '#fff', //Set Header text color
             headerTitleStyle: {
