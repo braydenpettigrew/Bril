@@ -1,63 +1,68 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Alert, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, SafeAreaView, Button } from 'react-native';
-import WelcomeScreen from './screens/WelcomeScreen';
-import ViewImageScreen from './screens/ViewImageScreen';
-import {NavigationContainer} from '@react-navigation/native';
+// Example: Switch from One Screen to another using React Navigation //
+// https://aboutreact.com/react-native-stack-navigation //
+//import 'react-native-gesture-handler';
 
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
 
-export default function App() {
-// handlePress is a function that writes to the console when the text is pressed.
-const handlePress = () => console.log("Text Pressed")
-const imagePress = () => console.log("Lifting man image pressed")
-const buttonPress = () => console.log("Button pressed")
+import { NavigationContainer } from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import FirstPage from './screens/FirstPage';
+import SecondPage from './screens/SecondPage';
+import ThirdPage from './screens/ThirdPage';
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
     <NavigationContainer>
-      <WelcomeScreen />
-      
-    </NavigationContainer>
-    //<ViewImageScreen></ViewImageScreen>
-
-    /*
-    // SafeAreaView creates a buffer around the screen so that nothing gets cut off.
-    // numberOfLines will truncate the text if it is too long for the specified number of lines.
-    // When we use the require function react native packager will include this file in our bundle. Increases size of our app.
-    // The image component is self-closing syntax.
-    <SafeAreaView style={[styles.container, containerStyle]}>
-      <Text numberOfLines={2} onPress={handlePress}>
-        Brill 3.0 - A really really long text. Now I want to make this even longer and see what happens.
-      </Text>
-      
-      <TouchableOpacity onPress = {imagePress}>
-        <Image 
-          style = {styles.liftingman} // Set the style of the lifting man image
-          source = {require('./assets/liftingman.png')}
+      <Stack.Navigator initialRouteName="FirstPage">
+        <Stack.Screen
+          name="FirstPage"
+          component={FirstPage}
+          options={{
+            title: 'First Page', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
         />
-      </TouchableOpacity>
-
-      <Button 
-        color = "red"
-        title = "Click Me!"
-        onPress = {() => Alert.alert('Title', 'you pressed the button', [{text: "Yes", onPress: () => console.log("Yes")}, {text: "No", onPress: () => console.log("No")}, {text: "Maybe", onPress: () => console.log("Maybe")}])}
-      />
-
-      <StatusBar style="auto" />
-    </SafeAreaView>
-    */
+        <Stack.Screen
+          name="SecondPage"
+          component={SecondPage}
+          options={{
+            title: 'Second Page', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ThirdPage"
+          component={ThirdPage}
+          options={{
+            title: 'Third Page', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const containerStyle = { backgroundColor: "orange"}
-
-const styles = StyleSheet.create({ // styles is an object with a property called container which is an object itself.
-  container: {
-    flex: 1, // View is flexible.
-    backgroundColor: '#5BBA66', // Background color is green.
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  liftingman: { // This is style of the lifting man image.
-    width: 100, 
-    height: 100,
-  }
-});
+export default App;
