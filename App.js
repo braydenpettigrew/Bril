@@ -22,7 +22,7 @@ function App() {
           name="FirstPage"
           component={FirstPage}
           options={{
-            title: 'First Page', //Set Header Title
+            title: 'Home', //Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', //Set Header color
             },
@@ -36,7 +36,7 @@ function App() {
           name="SecondPage"
           component={SecondPage}
           options={{
-            title: 'Second Page', //Set Header Title
+            title: 'Create Workout', //Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', //Set Header color
             },
@@ -50,7 +50,7 @@ function App() {
           name="ThirdPage"
           component={ThirdPage}
           options={{
-            title: 'Third Page', //Set Header Title
+            title: 'My Workouts', //Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', //Set Header color
             },

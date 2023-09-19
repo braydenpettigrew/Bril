@@ -47,7 +47,7 @@ const SecondPage = ({ navigation }) => {
           <Button title="Go to First Page" onPress={() => navigation.navigate('FirstPage')} />
           <Button
             title="Go to Third Page"
-            onPress={() => navigation.navigate('ThirdPage', { someParam: 'Param1' })}
+            onPress={() => navigation.navigate('ThirdPage', { someParam: 'I came here from the second page!' })}
           />
         </View>
         <Text style={{ fontSize: 18, textAlign: 'center', color: 'grey' }}>
