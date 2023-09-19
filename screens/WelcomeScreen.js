@@ -28,17 +28,17 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         width: '100%',
-        height: 70,
+        height: 90,
         backgroundColor: "dodgerblue",
     },
     registerButton: {
         width: '100%',
-        height: 70,
+        height: 90,
         backgroundColor: "blue",
     },
     logo: {
-        width: 100,
-        height: 100,
+        width: 125,
+        height: 125,
     },
     logoContainer: {
         position: 'absolute',
