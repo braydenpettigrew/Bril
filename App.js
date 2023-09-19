@@ -24,7 +24,7 @@ function App() {
           options={{
             title: 'First Page', //Set Header Title
             headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
+              backgroundColor: 'dodgerblue', //Set Header color
             },
             headerTintColor: '#fff', //Set Header text color
             headerTitleStyle: {
