@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Alert, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, SafeAreaView, Button } from 'react-native';
 import WelcomeScreen from './screens/WelcomeScreen';
 import ViewImageScreen from './screens/ViewImageScreen';
+import {NavigationContainer} from '@react-navigation/native';
 
 
 export default function App() {
@@ -11,8 +12,10 @@ const imagePress = () => console.log("Lifting man image pressed")
 const buttonPress = () => console.log("Button pressed")
 
   return (
-
-    <WelcomeScreen />
+    <NavigationContainer>
+      <WelcomeScreen />
+      
+    </NavigationContainer>
     //<ViewImageScreen></ViewImageScreen>
 
     /*
