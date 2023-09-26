@@ -22,8 +22,8 @@ function App() {
           name="FirstPage"
           component={FirstPage}
           options={{
-            headerLeft: undefined, // Gets rid of the back button in the top left
-            gestureEnabled: false,
+            headerBackVisible: false, // Gets rid of the back button in the top left
+            gestureEnabled: false, // Gets rid of swiping back gesture
             title: 'Home', // Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', // Set Header color
@@ -38,8 +38,8 @@ function App() {
           name="SecondPage"
           component={SecondPage}
           options={{
-            headerLeft: undefined, // Gets rid of the back button in the top left
-            gestureEnabled: false,
+            headerBackVisible: false, // Gets rid of the back button in the top left
+            gestureEnabled: false, // Gets rid of swiping back gesture
             title: 'Create Workout', // Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', // Set Header color
@@ -54,8 +54,8 @@ function App() {
           name="ThirdPage"
           component={ThirdPage}
           options={{
-            headerLeft: undefined, // Gets rid of the back button in the top left
-            gestureEnabled: false,
+            headerBackVisible: false, // Gets rid of the back button in the top left
+            gestureEnabled: false, // Gets rid of swiping back gesture
             title: 'My Workouts', // Set Header Title
             headerStyle: {
               backgroundColor: 'dodgerblue', // Set Header color
