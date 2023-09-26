@@ -1,5 +1,6 @@
 // Example: Switch from One Screen to another using React Navigation //
 // https://aboutreact.com/react-native-stack-navigation //
+
 import * as React from 'react';
 import { Button, View, Text, SafeAreaView, StyleSheet } from 'react-native';
 
@@ -29,7 +30,7 @@ const FirstPage = ({ navigation }) => {
           />
         <Button
             title="My Workout"
-            onPress={() => navigation.navigate('ThirdPage', { someParam: 'I came here from the first page!' })}
+            onPress={() => navigation.navigate('ThirdPage')}
           />
         </View>
         

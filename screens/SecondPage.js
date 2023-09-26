@@ -1,12 +1,12 @@
 // Example: Switch from One Screen to another using React Navigation //
 // https://aboutreact.com/react-native-stack-navigation //
 import * as React from 'react';
-import { Button, View, Text, SafeAreaView } from 'react-native';
+import { Button, View, Text, SafeAreaView, StyleSheet } from 'react-native';
 
 const SecondPage = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, padding: 16 }}>
+      <View style={{ flex: 1 , padding: 16}}>
         <View
           style={{
             flex: 1,
@@ -19,47 +19,38 @@ const SecondPage = ({ navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            This is Second Page of the App
+            Brill Fitness - Create a Workout
           </Text>
-          <Button title="Go back" onPress={() => navigation.goBack()} />
-          <Button
-            title="Replace this screen with Third Page"
-            onPress={() =>
-              navigation.replace('ThirdPage', {
-                someParam: 'Param',
-              })
-            }
+        </View>
+        <View style={styles.buttonStyle}>
+        <Button
+            onPress={() => navigation.navigate('SecondPage')}
+            title="Create Workout"
           />
-          <Button
-            title="Reset navigator state to Third Page"
-            onPress={() =>
-              navigation.reset({
-                index: 0,
-                routes: [
-                  {
-                    name: 'ThirdPage',
-                    params: { someParam: 'reset' },
-                  },
-                ],
-              })
-            }
-          />
-          <Button title="Go to First Page" onPress={() => navigation.navigate('FirstPage')} />
-          <Button
-            title="Go to Third Page"
-            onPress={() => navigation.navigate('ThirdPage', { someParam: 'I came here from the second page!' })}
+        <Button
+            title="My Workout"
+            onPress={() => navigation.navigate('ThirdPage')}
           />
         </View>
-        <Text style={{ fontSize: 18, textAlign: 'center', color: 'grey' }}>
-          Navigate Between Screens using{'\n'}React Navigation
-        </Text>
-        <Text
-          style={{ fontSize: 16, textAlign: 'center', color: 'grey' }}>
-          www.aboutreact.com
-        </Text>
+        
       </View>
     </SafeAreaView>
   );
 }
 
+const styles = StyleSheet.create({
+  buttonStyle: {
+    flex: .1,
+    backgroundColor: "dodgerblue",
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'row', // Makes the buttons side by side
+  }
+})
+
 export default SecondPage;
+{/* <Button
+  title="Go to Third Page"
+  onPress={() => navigation.navigate('ThirdPage', { someParam: 'I came here from the second page!' })}
+/> */}

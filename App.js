@@ -22,13 +22,15 @@ function App() {
           name="FirstPage"
           component={FirstPage}
           options={{
-            title: 'Home', //Set Header Title
+            headerLeft: undefined, // Gets rid of the back button in the top left
+            gestureEnabled: false,
+            title: 'Home', // Set Header Title
             headerStyle: {
-              backgroundColor: 'dodgerblue', //Set Header color
+              backgroundColor: 'dodgerblue', // Set Header color
             },
-            headerTintColor: '#fff', //Set Header text color
+            headerTintColor: '#fff', // Set Header text color
             headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
+              fontWeight: 'bold', // Set Header text style
             },
           }}
         />
@@ -36,13 +38,15 @@ function App() {
           name="SecondPage"
           component={SecondPage}
           options={{
-            title: 'Create Workout', //Set Header Title
+            headerLeft: undefined, // Gets rid of the back button in the top left
+            gestureEnabled: false,
+            title: 'Create Workout', // Set Header Title
             headerStyle: {
-              backgroundColor: 'dodgerblue', //Set Header color
+              backgroundColor: 'dodgerblue', // Set Header color
             },
-            headerTintColor: '#fff', //Set Header text color
+            headerTintColor: '#fff', // Set Header text color
             headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
+              fontWeight: 'bold', // Set Header text style
             },
           }}
         />
@@ -50,13 +54,15 @@ function App() {
           name="ThirdPage"
           component={ThirdPage}
           options={{
-            title: 'My Workouts', //Set Header Title
+            headerLeft: undefined, // Gets rid of the back button in the top left
+            gestureEnabled: false,
+            title: 'My Workouts', // Set Header Title
             headerStyle: {
-              backgroundColor: 'dodgerblue', //Set Header color
+              backgroundColor: 'dodgerblue', // Set Header color
             },
-            headerTintColor: '#fff', //Set Header text color
+            headerTintColor: '#fff', // Set Header text color
             headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
+              fontWeight: 'bold', // Set Header text style
             },
           }}
         />
