@@ -27,10 +27,12 @@ const ThirdPage = ({ navigation }) => {
         <Button
             onPress={() => navigation.navigate('SecondPage')}
             title="Create Workout"
+            color='black'
           />
         <Button
-            title="My Workout"
+            title="My Workouts"
             onPress={() => navigation.navigate('ThirdPage')}
+            color='black'
           />
         </View>
         
@@ -41,11 +43,11 @@ const ThirdPage = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    flex: .1,
-    backgroundColor: "dodgerblue",
+    flex: .06,
+    backgroundColor: "#FFCCCB",
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-around',
     flexDirection: 'row', // Makes the buttons side by side
   }
 })
